@@ -45,16 +45,16 @@ $img: clamp(200px, 20vw, 400px);
 header {
   @include center();
   width: 100vw;
-  background-color: yellow;
+  background-color: black;
   height: 5vh;
 }
 
 .links {
   a {
-    color: gray;
+    color: white;
   }
   a:hover {
-    color: black;
+    color: yellow;
     font-size: 150%;
   }
 }
