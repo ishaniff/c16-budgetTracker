@@ -63,14 +63,14 @@ body {
 .home h1, .tracker h1 {
   padding-top: 50px;
   letter-spacing: 7px;
-  font-size: clamp(32px, 7vw, 72px);
+  font-size: clamp(32px, 7vw, 55px);
 }
 .home span, .tracker span {
   background-color: black;
   padding: 10px;
   border-radius: 25%;
   color: yellow;
-  font-size: clamp(12px, 4vw, 28px);
+  font-size: clamp(12px, 4vw, 20px);
 }
 .home span:nth-child(1):hover, .tracker span:nth-child(1):hover {
   background-color: white;
