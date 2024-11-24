@@ -34,6 +34,11 @@ header ul, footer ul {
   gap: 30px;
   display: flex;
 }
+header ul, footer ul,
+header li,
+footer li {
+  list-style-type: none;
+}
 
 .links a {
   color: white;
