@@ -47,15 +47,22 @@ header {
   width: 100vw;
   background-color: black;
   height: 5vh;
+  display: flex;
+  flex-direction: row;
+  ul {
+    gap: 30px;
+    display: flex;
+  }
 }
 
 .links {
   a {
     color: white;
+    font-size: 140%;
   }
   a:hover {
     color: yellow;
-    font-size: 150%;
+    font-size: 200%;
   }
 }
 

@@ -27,14 +27,21 @@ header, footer {
   width: 100vw;
   background-color: black;
   height: 5vh;
+  display: flex;
+  flex-direction: row;
+}
+header ul, footer ul {
+  gap: 30px;
+  display: flex;
 }
 
 .links a {
   color: white;
+  font-size: 140%;
 }
 .links a:hover {
   color: yellow;
-  font-size: 150%;
+  font-size: 200%;
 }
 
 .pageContainer {
