@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Font Call In -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budget Tracker</title>
   </head>
   <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tracker">Tracker</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="pageContainer">
+        <div id="home" class="home">
+          <div class="home-container">
+            <h1>Welcome To Budget Tracker</h1>
+            <div class="homeTop">
+              <img class="homeImages" src="/images/homeWelcome.png" />
+              <a href="#tracker"><span>Start Tracking</span></a>
+            </div>
+            <div class="homeBot">
+              <img class="homeImages" src="/images/homeLove.png" />
+              <span>This tracker has helped me out so much! -Maria</span>
+            </div>
+          </div>
+        </div>
+        <div id="tracker" class="tracker">
+          <div class="tracker-container">
+            <h1 id="currentBalance">Current Balance</h1>
+            <h1 id="grossIncome">Gross Income</h1>
+            <h1 id="grossExpense">Gross Expense</h1>
+            <span>Dollar Amount</span>
+            <input
+              id="inputAmount"
+              type="number"
+              placeholder="Enter your dollar amount" />
+            <span>Description</span>
+            <input id="inputReason" placeholder="Enter a short description" />
+            <form id="radios">
+              <label
+                >One Time Payment<input
+                  type="radio"
+                  name="recurrance"
+                  value="1"
+                  checked
+              /></label>
+              <label
+                >Once a week<input type="radio" name="recurrance" value="52"
+              /></label>
+              <label
+                >Once a month <input type="radio" name="recurrance" value="12"
+              /></label>
+            </form>
+            <button id="buttonSubmit">Add to tracker</button>
+            <button id="buttonReset">Clear all values</button>
+            <div class="history">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Reason</th>
+                    <th>Amount</th>
+                    <th>Recurrence</th>
+                  </tr>
+                </thead>
+                <tbody id="table"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <ul class="links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tracker">Tracker</a></li>
+        </ul>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

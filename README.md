@@ -1,6 +1,9 @@
 Color Scheme
 https://www.schemecolor.com/pastel-purple-and-yellow.php#download
 
+Font Choice
+https://fonts.google.com/specimen/Geist+Mono
+
 Name: Dark Pastel Purple
 Hex: #9470ce
 RGB: (148, 112, 206)

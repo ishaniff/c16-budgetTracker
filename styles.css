@@ -1,1 +1,160 @@
-/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Geist+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  font-family: "Faculty Glyphic", serif;
+  letter-spacing: 3px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  width: 100vw;
+  height: 100vh;
+}
+
+header, footer {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: yellow;
+  height: 5vh;
+}
+
+.links a {
+  color: gray;
+}
+.links a:hover {
+  color: black;
+  font-size: 150%;
+}
+
+.pageContainer {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: 80vw;
+  height: 90vh;
+}
+
+body {
+  background: linear-gradient(purple, yellow);
+}
+
+.home, .tracker {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  background: rgba(255, 255, 255, 0.388);
+  height: 90vh;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+.home h1, .tracker h1 {
+  padding-top: 50px;
+  letter-spacing: 7px;
+  font-size: clamp(32px, 7vw, 72px);
+}
+.home span, .tracker span {
+  background-color: black;
+  padding: 10px;
+  border-radius: 25%;
+  color: yellow;
+  font-size: clamp(12px, 4vw, 28px);
+}
+.home span:nth-child(1):hover, .tracker span:nth-child(1):hover {
+  background-color: white;
+  color: black;
+}
+.home img, .tracker img {
+  height: clamp(200px, 20vw, 400px);
+}
+
+.homeTop, .homeBot {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  padding: 30px;
+}
+
+.homeBot {
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-direction: row;
+}
+
+.tracker {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-grow: 1;
+  height: 90vh;
+  scroll-snap-align: start;
+}
+.tracker h1 {
+  font-size: 24px;
+  padding-top: 10px;
+}
+.tracker span {
+  border-radius: 0%;
+}
+
+.tracker-container, .history {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  flex-grow: 0;
+  width: 70%;
+}
+.tracker-container form, .history form {
+  display: flex;
+  flex-direction: column;
+}
+.tracker-container form input, .history form input {
+  height: 15px;
+  width: 15px;
+}
+.tracker-container input, .history input {
+  height: 100px;
+}
+.tracker-container label, .history label {
+  font-size: 24px;
+}
+.tracker-container button, .history button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.tracker-container button:hover, .history button:hover {
+  background-color: black;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 56vw;
+}
+
+td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.history {
+  flex-grow: 1;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Geist+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+// Colors
+$primary-color: purple;
+$secondary-color: yellow;
+
+// Mixin
+@mixin gradient {
+  background: linear-gradient($primary-color, $secondary-color);
+}
+@mixin center {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+// Sizes
+$fontSmall: clamp(12px, 4vw, 28px);
+$fontMedium: 24px;
+$fontLarge: clamp(32px, 7vw, 72px);
+$img: clamp(200px, 20vw, 400px);
+
+// MediaQueries
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  font-family: "Faculty Glyphic", serif;
+  letter-spacing: 3px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  @include center();
+  width: 100vw;
+  background-color: yellow;
+  height: 5vh;
+}
+
+.links {
+  a {
+    color: gray;
+  }
+  a:hover {
+    color: black;
+    font-size: 150%;
+  }
+}
+
+.pageContainer {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: 80vw;
+  height: 90vh;
+}
+
+body {
+  @include gradient();
+}
+
+.home {
+  @include center();
+  display: block;
+  background: rgba(255, 255, 255, 0.388);
+  height: 90vh;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  width: 100%;
+  h1 {
+    padding-top: 50px;
+    letter-spacing: 7px;
+    font-size: $fontLarge;
+  }
+  span {
+    background-color: black;
+    padding: 10px;
+    border-radius: 25%;
+    color: $secondary-color;
+    font-size: $fontSmall;
+  }
+  span:nth-child(1) {
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  img {
+    height: $img;
+  }
+}
+
+@media screen {
+}
+
+.homeTop {
+  @include center();
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  padding: 30px;
+}
+.homeBot {
+  @extend .homeTop;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-direction: row;
+}
+
+.tracker {
+  @extend .home;
+  h1 {
+    font-size: $fontMedium;
+    padding-top: 10px;
+  }
+  span {
+    border-radius: 0%;
+  }
+  scroll-behavior: smooth;
+  display: flex;
+  flex-grow: 1;
+  height: 90vh;
+  scroll-snap-align: start;
+}
+
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  flex-grow: 0;
+  width: 70%;
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  input {
+    height: 100px;
+  }
+  label {
+    font-size: $fontMedium;
+  }
+  button {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 56vw;
+}
+
+td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.history {
+  @extend .tracker-container;
+  flex-grow: 1;
+}
+
+footer {
+  @extend header;
+}
